@@ -14,7 +14,7 @@ export const Menu = (props: MenuType) => {
       {props.categories.map((item) => {
         return (
           <li>
-            <Link to="./"> {item.label} </Link>
+            <Link key={item.id} to="./"> {item.label} </Link>
           </li>
         );
       })}

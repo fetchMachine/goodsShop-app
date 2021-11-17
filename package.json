@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "react-router-dom": "^6.0.2"
+    "antd": "^4.16.13",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.0.2",
+    "redux": "^4.1.2"
   }
 }

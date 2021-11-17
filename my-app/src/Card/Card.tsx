@@ -1,5 +1,6 @@
 import { Card } from "antd";
-import css from "./style.module.css";
+import "antd/dist/antd.css";
+import React from "react";
 
 export interface CardType {
   id: number;
@@ -8,11 +9,16 @@ export interface CardType {
   price: number;
   img: string;
 }
+const { Meta } = Card;
 export const GoodCard = (props: CardType) => {
   return (
-    <Card className={css.card} title={props.label}>
-      {props.img}
-      {props.price + "руб"}
+    <Card
+     
+      hoverable
+      style={{ width: 240 }}
+      cover={props.img}
+    >
+      <Meta title={props.label} description={props.price + "руб"} />
     </Card>
   );
 };

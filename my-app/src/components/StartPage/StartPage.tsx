@@ -1,12 +1,11 @@
 import { Row, Col } from "antd";
 import { Menu } from "../Menu";
-import { Route, Routes } from "react-router-dom";
+
 import { Header } from "../Header";
 import { Footer } from "../Footer";
 export const StartPage: React.FC = () => {
   return (
-    <Routes>
-      <Route path="#">
+  <>
         <Header />
         <Row>
           <Col xs={24} span={18} push={6} />
@@ -15,7 +14,6 @@ export const StartPage: React.FC = () => {
           </Col>
         </Row>
         <Footer/>
-      </Route>
-    </Routes>
+</>
   );
 };

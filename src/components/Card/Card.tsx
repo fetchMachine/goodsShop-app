@@ -9,16 +9,23 @@ export interface CardType {
   price: number;
   img: string;
 }
-const { Meta } = Card;
-export const GoodCard = (props: CardType) => {
+
+export const GoodCard: React.FC<CardType> = ({ id, label, price, img }) => {
+  const { Meta } = Card;
   return (
     <Card
-     
+   
       hoverable
-      style={{ width: 240 }}
-      cover={props.img}
+      style={{
+        width: 240,
+        margin: "10px",
+        backgroundColor: "rgba(0, 0, 0, 0.12)",
+      }}
+      cover={img}
     >
-      <Meta title={props.label} description={props.price + "руб"} />
+      <img src={img} alt="" style={{ width: "190px", height: "110px" }} />
+      <Meta title={label} description={price + "руб"} />
+      
     </Card>
   );
 };

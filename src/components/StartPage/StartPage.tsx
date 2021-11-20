@@ -254,7 +254,6 @@ export class StartPage extends React.Component<{}, StartPageSate> {
         {StartPage.goodsCategory.map((image) => (
           <div>
             <h2 style={{ textAlign: "center" }}>{image.category.label} </h2>
-
             <div style={{ display: "flex", justifyContent: "center" }}>
               {image.items.map((item) => (
                 <Card
@@ -268,7 +267,6 @@ export class StartPage extends React.Component<{}, StartPageSate> {
             </div>
           </div>
         ))}
-
         <Footer />
       </>
     );

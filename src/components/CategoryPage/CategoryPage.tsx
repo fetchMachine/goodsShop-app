@@ -1,11 +1,11 @@
 import React from "react";
 
-interface GoodsCategoryProps{
+interface CategoryProps{
     category:{id:number, type:string, label: string }[];
     items:{id:number, category_type:string, price:number, label:string, img:string}[]
 }
 
-export const GoodsCategory:React.FC< GoodsCategoryProps> = ({}) =>{
+export const Category:React.FC< CategoryProps> = ({ }) =>{
     return(
             <div></div>
     )

@@ -5,7 +5,7 @@ interface CategoryProps{
     items:{id:number, category_type:string, price:number, label:string, img:string}[]
 }
 
-export const Category:React.FC< CategoryProps> = ({ }) =>{
+export const CategoryPage:React.FC< CategoryProps> = ({ }) =>{
     return(
             <div></div>
     )

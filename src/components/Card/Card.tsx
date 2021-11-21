@@ -1,6 +1,6 @@
 import "antd/dist/antd.css";
 import React from "react";
-import { Card, Col, Row } from "antd";
+import { Card} from "antd";
 
 export interface CardType {
   id: number;
@@ -12,27 +12,15 @@ export interface CardType {
 
 export const GoodCard: React.FC<CardType> = ({ id, label, price, img }) => {
   return (
-    <div className="site-card-wrapper">
-      <Row gutter={16}>
-        <Col span={8}>
-          <Card title={label} bordered={false}>
-            {img}
-            {price}
-          </Card>
-        </Col>
-        <Col span={8}>
-          <Card title={label} bordered={false}>
-          {img}
-            {price}
-          </Card>
-        </Col>
-        <Col span={8}>
-          <Card title={label} bordered={false}>
-          {img}
-            {price}
-          </Card>
-        </Col>
-      </Row>
-    </div>
+    <Card
+    hoverable
+    style={{ width: 240, margin:"10px", backgroundColor: '#abcdef' }}
+   
+>
+
+<img src={img} alt="" style={{width:"190px" , height:"110px"}} />
+{label} <br/>
+{price + "$"}
+</Card>
   );
 };

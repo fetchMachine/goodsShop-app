@@ -1,5 +1,6 @@
 import css from "./style.module.css";
 import { Link } from "react-router-dom";
+import { type } from "os";
 
 interface MenuType {
   categories: {
@@ -14,7 +15,7 @@ export const Menu = (props: MenuType) => {
       {props.categories.map((item) => {
         return (
           <li>
-            <Link key={item.id} to="./"> {item.label} </Link>
+            <Link key={item.id} to={`/${type}`}> {item.label} </Link>
           </li>
         );
       })}

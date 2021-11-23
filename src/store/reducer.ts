@@ -14,7 +14,6 @@ const INITIAL_STATE: State = {
     { id: 4, type: "souvenirs", label: "Сувениры, галантерея" },
     { id: 5, type: "books", label: "Книги" },
     { id: 6, type: "products", label: "Продукты, деликатесы" },
-    { id: 7, type: "garden", label: "Дом, сад, зоотовары" },
     { id: 8, type: "electronics", label: "Техника, электроника" },
     { id: 9, type: "studies", label: "Канцтовары, учёба" },
     { id: 10, type: "sport", label: "Туризм, отдых, спорт" },
@@ -23,7 +22,7 @@ const INITIAL_STATE: State = {
   
  goodsCategory : [
   {
-    category: { id: 1, type: "house", label: "Дом" },
+    category: { id: 1, type: "house", label: "Дом, сад, зоотовары" },
     items: [
       {
         id: 1,
@@ -63,7 +62,7 @@ const INITIAL_STATE: State = {
     ],
   },
   {
-    category: { id: 2, type: "house", label: "Канцтовары, учёба" },
+    category: { id: 2, type: "children", label: "Детям и мамам" },
     items: [
       {
         id: 1,
@@ -103,7 +102,7 @@ const INITIAL_STATE: State = {
     ],
   },
   {
-    category: { id: 2, type: "house", label: "Косметика, парфюмерия" },
+    category: { id: 3, type: "cosmetics", label: "Косметика, парфюмерия" },
     items: [
       {
         id: 1,
@@ -143,7 +142,7 @@ const INITIAL_STATE: State = {
     ],
   },
   {
-    category: { id: 3, type: "house", label: "Книги" },
+    category: { id: 4, type: "souvenirs", label: "Сувениры, галантерея" },
     items: [
       {
         id: 1,
@@ -183,7 +182,7 @@ const INITIAL_STATE: State = {
     ],
   },
   {
-    category: { id: 4, type: "house", label: "Продукты питания, напитки" },
+    category: { id: 5, type: "books", label: "Книги" },
     items: [
       {
         id: 1,
@@ -223,7 +222,128 @@ const INITIAL_STATE: State = {
     ],
   },
   {
-    category: { id: 5, type: "house", label: "Развлечения, творчество" },
+    category: { id: 6, type: "products", label: "Продукты, деликатесы" },
+    items: [
+      {
+        id: 1,
+        category_type: "house",
+        label: "Коврик",
+        price: 99,
+        img: "https://source.unsplash.com/random",
+      },
+      {
+        id: 2,
+        category_type: "house",
+        label: "Коврик",
+        price: 99,
+        img: "https://source.unsplash.com/random",
+      },
+      {
+        id: 3,
+        category_type: "house",
+        label: "Коврик",
+        price: 99,
+        img: "https://source.unsplash.com/random",
+      },
+      {
+        id: 4,
+        category_type: "house",
+        label: "Коврик",
+        price: 99,
+        img: "https://source.unsplash.com/random",
+      },
+      {
+        id: 5,
+        category_type: "house",
+        label: "Коврик",
+        price: 99,
+        img: "https://source.unsplash.com/random",
+      },
+    ],
+  },
+  {
+    category: { id: 8, type: "electronics", label: "Техника, электроника" },
+    items: [
+      {
+        id: 1,
+        category_type: "house",
+        label: "Коврик",
+        price: 99,
+        img: "https://source.unsplash.com/random",
+      },
+      {
+        id: 2,
+        category_type: "house",
+        label: "Коврик",
+        price: 99,
+        img: "https://source.unsplash.com/random",
+      },
+      {
+        id: 3,
+        category_type: "house",
+        label: "Коврик",
+        price: 99,
+        img: "https://source.unsplash.com/random",
+      },
+      {
+        id: 4,
+        category_type: "house",
+        label: "Коврик",
+        price: 99,
+        img: "https://source.unsplash.com/random",
+      },
+      {
+        id: 5,
+        category_type: "house",
+        label: "Коврик",
+        price: 99,
+        img: "https://source.unsplash.com/random",
+      },
+    ],
+  },
+  {
+    category:  { id: 9, type: "studies", label: "Канцтовары, учёба" },
+    items: [
+      {
+        id: 1,
+        category_type: "house",
+        label: "Коврик",
+        price: 99,
+        img: "https://source.unsplash.com/random",
+      },
+      {
+        id: 2,
+        category_type: "house",
+        label: "Коврик",
+        price: 99,
+        img: "https://source.unsplash.com/random",
+      },
+      {
+        id: 3,
+        category_type: "house",
+        label: "Коврик",
+        price: 99,
+        img: "https://source.unsplash.com/random",
+      },
+      {
+        id: 4,
+        category_type: "house",
+        label: "Коврик",
+        price: 99,
+        img: "https://source.unsplash.com/random",
+      },
+      {
+        id: 5,
+        category_type: "house",
+        label: "Коврик",
+        price: 99,
+        img: "https://source.unsplash.com/random",
+      },
+    ],
+  },
+  
+  {
+    category: { id: 11, type: "health", label: "Здоровье, медтехника" },
     items: [
       {
         id: 1,

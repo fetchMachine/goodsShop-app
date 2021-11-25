@@ -7,8 +7,8 @@ import { Link, useNavigate } from "react-router-dom";
 
 export const ProductPage: React.FC = () => {
   const goodsCategory = useSelector(StoreSelectors.getGoodsCategory);
-  const { category_type } = useParams();
-  const itemsType = goodsCategory.find((el)=> el.items.find((category) => category.category_type === category_type));
+  const { type } = useParams();
+  const itemsType = goodsCategory.find((el)=> el.items.find((category) => category.category_type === type));
   let navigate = useNavigate();
   function handleClick() {
     navigate("/");

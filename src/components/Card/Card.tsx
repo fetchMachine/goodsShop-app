@@ -8,9 +8,10 @@ export interface CardType {
   label: string;
   price: number;
   img: string;
+  discription: string;
 }
 
-export const GoodCard: React.FC<CardType> = ({ id, label, price, img }) => {
+export const GoodCard: React.FC<CardType> = ({ id, label, price, img, discription }) => {
   return (
     <Card
       hoverable
@@ -19,6 +20,8 @@ export const GoodCard: React.FC<CardType> = ({ id, label, price, img }) => {
       <img src={img} alt="" style={{ width: "190px", height: "110px" }} />
       {label} <br />
       {price + "$"}
+      <br />
+     {discription}
     </Card>
   );
 };

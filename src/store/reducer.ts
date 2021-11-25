@@ -2,7 +2,7 @@ import { Action } from "redux";
 
 interface State {
   categories: { id: number; type: string; label: string }[];
-  goodsCategory : { category: {id: number; type: string; label: string },items:{id:number, category_type:string, price:number, label:string, img:string}[] }[];
+  goodsCategory : { category: {id: number; type: string; label: string },items:{id:number, category_type:string, price:number, label:string, img:string, discription: string}[] }[];
   
 }
 
@@ -14,10 +14,10 @@ const INITIAL_STATE: State = {
     { id: 4, type: "souvenirs", label: "Сувениры, галантерея" },
     { id: 5, type: "books", label: "Книги" },
     { id: 6, type: "products", label: "Продукты, деликатесы" },
-    { id: 8, type: "electronics", label: "Техника, электроника" },
-    { id: 9, type: "studies", label: "Канцтовары, учёба" },
-    { id: 10, type: "sport", label: "Туризм, отдых, спорт" },
-    { id: 11, type: "health", label: "Здоровье, медтехника" },
+    { id: 7, type: "electronics", label: "Техника, электроника" },
+    { id: 8, type: "studies", label: "Канцтовары, учёба" },
+    { id: 9, type: "sport", label: "Туризм, отдых, спорт" },
+    { id: 10, type: "health", label: "Здоровье, медтехника" },
   ],
   
  goodsCategory : [
@@ -29,21 +29,25 @@ const INITIAL_STATE: State = {
         category_type: "house",
         label: "Коврик",
         price: 99,
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.изни. ",
         img: "https://source.unsplash.com/random",
+        
       },
       {
         id: 2,
         category_type: "house",
-        label: "Коврик",
+        label: "Забор",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 3,
         category_type: "house",
-        label: "Коврик",
+        label: "Ваза",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 4,
@@ -51,13 +55,16 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
+      
       {
         id: 5,
         category_type: "house",
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
     ],
   },
@@ -70,13 +77,16 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
+      
       {
         id: 2,
         category_type: "house",
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 3,
@@ -84,6 +94,8 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+            discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
+        
       },
       {
         id: 4,
@@ -91,6 +103,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 5,
@@ -98,6 +111,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
     ],
   },
@@ -110,6 +124,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 2,
@@ -117,6 +132,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 3,
@@ -124,6 +140,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 4,
@@ -131,6 +148,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 5,
@@ -138,6 +156,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
     ],
   },
@@ -150,6 +169,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 2,
@@ -157,6 +177,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 3,
@@ -164,6 +185,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 4,
@@ -171,6 +193,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 5,
@@ -178,6 +201,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
     ],
   },
@@ -190,6 +214,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 2,
@@ -197,6 +222,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 3,
@@ -204,6 +230,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 4,
@@ -211,6 +238,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 5,
@@ -218,6 +246,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
     ],
   },
@@ -230,6 +259,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 2,
@@ -237,6 +267,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 3,
@@ -244,6 +275,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 4,
@@ -251,6 +283,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 5,
@@ -258,11 +291,12 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
     ],
   },
   {
-    category: { id: 8, type: "electronics", label: "Техника, электроника" },
+    category: { id: 7, type: "electronics", label: "Техника, электроника" },
     items: [
       {
         id: 1,
@@ -270,6 +304,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 2,
@@ -277,6 +312,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 3,
@@ -284,6 +320,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 4,
@@ -291,6 +328,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 5,
@@ -298,11 +336,12 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
     ],
   },
   {
-    category:  { id: 9, type: "studies", label: "Канцтовары, учёба" },
+    category:  { id: 8, type: "studies", label: "Канцтовары, учёба" },
     items: [
       {
         id: 1,
@@ -310,6 +349,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 2,
@@ -317,6 +357,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 3,
@@ -324,6 +365,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 4,
@@ -331,6 +373,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 5,
@@ -338,12 +381,14 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
     ],
   },
   
+  
   {
-    category: { id: 11, type: "health", label: "Здоровье, медтехника" },
+    category: { id: 10, type: "health", label: "Туризм, отдых, спорт" },
     items: [
       {
         id: 1,
@@ -351,6 +396,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 2,
@@ -358,13 +404,16 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
+
       {
         id: 3,
         category_type: "house",
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 4,
@@ -372,6 +421,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
       {
         id: 5,
@@ -379,6 +429,7 @@ const INITIAL_STATE: State = {
         label: "Коврик",
         price: 99,
         img: "https://source.unsplash.com/random",
+        discription: "Отличный подарок для приверженцев здорового образа жизни. Размер в сложеном виде: 60х43х12 см.",
       },
     ],
   },

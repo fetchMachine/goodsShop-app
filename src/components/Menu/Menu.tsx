@@ -1,6 +1,6 @@
-import css from "./style.module.css";
 import { Link } from "react-router-dom";
-import { type } from "os";
+import { Menu } from "antd";
+
 
 interface MenuType {
   categories: {
@@ -9,16 +9,17 @@ interface MenuType {
     label: string;
   }[];
 }
-export const Menu = (props: MenuType) => {
+
+export const MenuSide = (props: MenuType) => {
   return (
-    <ul className={css.menu}>
-      {props.categories.map((item) => {
-        return (
-          <li>
-            <Link to={`/${type}`}> {item.label} </Link>
-          </li>
-        );
-      })}
-    </ul>
+    <div>
+      <Menu mode="vertical">
+        {props.categories.map((item) => (
+          <Menu.Item key={item.id}>
+            <Link to={`/${item.type}`}> {item.label} </Link>
+          </Menu.Item>
+        ))}
+      </Menu>
+    </div>
   );
 };

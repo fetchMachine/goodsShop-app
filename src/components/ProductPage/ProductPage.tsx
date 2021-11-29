@@ -7,13 +7,13 @@ import { Link, useNavigate } from "react-router-dom";
 
 export const ProductPage: React.FC = () => {
   const goodsCategory = useSelector(StoreSelectors.getGoodsCategory);
-  const { type } = useParams();
-  const itemsType = goodsCategory.find((el)=> el.items.find((category) => category.category_type === type));
+  const { type, id } = useParams();
+  const good = goodsCategory.find((category)=> category.category.type === type)?.items.find((item) => item.id === Number(id));
   let navigate = useNavigate();
   function handleClick() {
-    navigate("/");
+    navigate("-1");
   }
-  if (!itemsType) {
+  if (!good) {
     return (
       <div>
         Продукт не найден, вернуться 
@@ -24,17 +24,17 @@ export const ProductPage: React.FC = () => {
     );
   }
   return (
-    <div>
-      {itemsType.items.map((item) => (
+    <Link to={`/${good.category_type}/${good.id}`}>
         <GoodCard
-          id={item.id}
-          label={item.label}
-          price={item.price}
-          img={item.img}
-          category_type={item.category_type}
-          discription={item.discription}
-        ></GoodCard>
-      ))}
-    </div>
+          id={good.id}
+          label={good.label}
+          price={good.price}
+          img={good.img}
+          category_type={good.category_type}
+          discription={good.discription}
+        />
+       </Link>
   );
 };
+
+

@@ -12,7 +12,7 @@ export const CategoryPage: React.FC = () => {
 
   let navigate = useNavigate();
   function handleClick() {
-    navigate("/");
+    navigate("-1");
   }
 
   if (!thisType) {
@@ -28,6 +28,7 @@ export const CategoryPage: React.FC = () => {
   return (
     <div>
       {thisType.items.map((item) => (
+        <Link to={`${item.category_type}/${item.id}`}>
         <GoodCard
           id={item.id}
           label={item.label}
@@ -35,7 +36,9 @@ export const CategoryPage: React.FC = () => {
           img={item.img}
           category_type={item.category_type}
           discription={item.discription}
-        ></GoodCard>
+        />
+        </Link>
+
       ))}
     </div>
   );

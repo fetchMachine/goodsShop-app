@@ -1,14 +1,30 @@
+import {getCategories} from "../store"
+import {getGoodsCategory} from "../store"
+
 interface Good {
-    id: string;
-    label: string;
-   
+  id: string;
+  label: string;
+  type: string;
+  category_type: string;
+  price: number;
+  img: string;
+  description: string;
 }
 class Api {
-    getGoods(): Promise<{ items: Good[]; total: number }> {
-        return fetch('/api/goods').then(r => {
-            if (r.ok) {
-                return r.json()
-            }
-        });
-    }
+  getMenuCategories(): Promise< getCategories[]> {
+    return fetch("/api/catigories").then((r) => {
+      if (r.ok) {
+        return r.json();
+      }
+    });
+  }
 }
+class Api {
+    getMenuCategories(): Promise<getGoodsCategory []> {
+      return fetch("/api/goodsCatigories").then((r) => {
+        if (r.ok) {
+          return r.json();
+        }
+      });
+    }
+  }

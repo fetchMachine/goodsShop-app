@@ -2,13 +2,13 @@ import React from "react";
 import { GoodCard } from "components/Card";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router";
-import { StoreSelectors } from "store";
+import { StoreSelectors} from "./index";
 import { Link, useNavigate } from "react-router-dom";
 
 export const ProductPage: React.FC = () => {
-  const goodsCategory = useSelector(StoreSelectors.getGoodsCategory);
+  const popularCategories = useSelector(StoreSelectors.getPopularCategories);
   const { type, id } = useParams();
-  const good = goodsCategory.find((category)=> category.category.type === type)?.items.find((item) => item.id === Number(id));
+  const good = popularCategories.find((category)=> category.category.type === type)?.items.find((item) => item.id === Number(id));
   let navigate = useNavigate();
   function handleClick() {
     navigate("-1");
@@ -24,7 +24,7 @@ export const ProductPage: React.FC = () => {
     );
   }
   return (
-    <Link to={`/${good.category_type}/${good.id}`}>
+    <Link to={`${good.category_type}/${good.id}`}>
         <GoodCard
           id={good.id}
           label={good.label}
@@ -33,7 +33,7 @@ export const ProductPage: React.FC = () => {
           category_type={good.category_type}
           discription={good.discription}
         />
-       </Link>
+        </Link>
   );
 };
 

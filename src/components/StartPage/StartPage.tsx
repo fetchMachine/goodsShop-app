@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { MenuSide } from "../Menu";
 import { GoodCard } from "components/Card/Card";
 import { useSelector } from "react-redux";
@@ -7,7 +7,10 @@ import { Link } from "react-router-dom";
 
 export const StartPage: React.FC = () => {
   const categories = useSelector(StoreSelectors.getCategories);
-  const goodsCategory = useSelector(StoreSelectors.getGoodsCategory);
+
+  useEffect(() => {
+    dispatchEvent(action)
+  }, [])
 
   return (
     <>
@@ -19,7 +22,7 @@ export const StartPage: React.FC = () => {
           alt=""
         />
       </div>
-      {goodsCategory.map((image) => (
+      {categories.map((image) => (
         <div>
           <h2 style={{ textAlign: "center" }}>{image.category.label} </h2>
           <div style={{ display: "flex", justifyContent: "center" }}>
@@ -41,3 +44,5 @@ export const StartPage: React.FC = () => {
     </>
   );
 };
+
+

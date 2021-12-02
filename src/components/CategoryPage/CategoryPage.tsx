@@ -2,13 +2,13 @@ import { GoodCard } from "components/Card";
 import React from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router";
-import { StoreSelectors } from "store";
+import { StoreSelectors  } from "store";
 import { Link, useNavigate } from "react-router-dom";
 
 export const CategoryPage: React.FC = () => {
-  const goodsCategory = useSelector(StoreSelectors.getGoodsCategory);
+  const categories = useSelector(StoreSelectors.getCategories);
   const { type } = useParams();
-  const thisType = goodsCategory.find((el) => el.category.type === type ) ;
+  const thisType = categories.find((el) => el.category.type === type ) ;
 
   let navigate = useNavigate();
   function handleClick() {

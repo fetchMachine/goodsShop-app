@@ -1,30 +1,22 @@
-import {getCategories} from "../store"
-import {getGoodsCategory} from "../store"
+import React from "react";
 
-interface Good {
-  id: string;
-  label: string;
-  type: string;
-  category_type: string;
-  price: number;
-  img: string;
-  description: string;
+interface Goods {
+    id: number,
+    label: string,
+    category_type: string,
+    img: string,
+    price: number,
+    description: string
 }
-class Api {
-  getMenuCategories(): Promise< getCategories[]> {
-    return fetch("/api/catigories").then((r) => {
-      if (r.ok) {
-        return r.json();
-      }
-    });
-  }
-}
-class Api {
-    getMenuCategories(): Promise<getGoodsCategory []> {
-      return fetch("/api/goodsCatigories").then((r) => {
-        if (r.ok) {
-          return r.json();
-        }
-      });
+
+export class Api {
+
+    getDataGoods(): Promise<{ items: Goods[], total: number }> {
+        return fetch('/api/good').then((resp) => {
+            if (resp.ok) {
+                return resp.json()
+            }
+        })
     }
-  }
+   
+}

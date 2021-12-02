@@ -1,8 +1,11 @@
-import { createStore } from "redux";
-import { reducer } from "./reducer";
+import { createStore, combineReducers, applyMiddleware } from 'redux'
+import { menuCategoriesReducer } from './menuCategories'
+import thunk from 'redux-thunk'
 
 
+const rootReducer = combineReducers({
+    menuCategories: menuCategoriesReducer,
+})
+export type RootState = ReturnType<typeof store.getState>
 
-export const store = createStore(reducer);
-
-export type RootStore = ReturnType<typeof store.getState>;
+export const store = createStore(rootReducer, applyMiddleware(thunk))

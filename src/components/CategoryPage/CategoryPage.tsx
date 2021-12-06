@@ -8,7 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 export const CategoryPage: React.FC = () => {
   const categories = useSelector(StoreSelectors.getCategories);
   const { type } = useParams();
-  const thisType = categories.find((el) => el.category.type === type ) ;
+  const thisType = categories.find((el: { category: { type: string | undefined; }; }) => el.category.type === type ) ;
 
   let navigate = useNavigate();
   function handleClick() {
@@ -27,7 +27,7 @@ export const CategoryPage: React.FC = () => {
   }
   return (
     <div>
-      {thisType.items.map((item) => (
+      {thisType.items.map((item: { category_type: string; id: number; label: string; price: number; img: string; discription: string; }) => (
         <Link to={`${item.category_type}/${item.id}`}>
         <GoodCard
           id={item.id}

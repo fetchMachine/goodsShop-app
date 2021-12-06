@@ -1,6 +1,7 @@
 import "antd/dist/antd.css";
 import React from "react";
 import { Card } from "antd";
+
 export interface CardType {
   id: number;
   category_type: string;

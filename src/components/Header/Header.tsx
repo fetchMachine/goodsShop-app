@@ -1,4 +1,4 @@
-import { PageHeader, Divider, Input, Badge, Avatar } from "antd";
+import { PageHeader, Divider, Input, Badge } from "antd";
 import css from "./style.module.css"
 import { Link } from "react-router-dom";
 import { createFromIconfontCN } from '@ant-design/icons';

@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { GoodCard } from "components/Card";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router";
-import { StoreSelectors} from "./index";
 import { Link, useNavigate } from "react-router-dom";
+import { GoodsActions } from "store/goodsSlice";
+import {StoreSelectors} from "../../store"
 
+interface ProductsPageType {
+  category_type: string,
+  id: number,
+}
 export const ProductPage: React.FC = () => {
+
+  useEffect(() => {
+    dispatch(GoodsActions.fetchGoods)
+}, []) 
+
   const popularCategories = useSelector(StoreSelectors.getPopularCategories);
   const { type, id } = useParams();
-  const good = popularCategories.find((category)=> category.category.type === type)?.items.find((item) => item.id === Number(id));
-  let navigate = useNavigate();
+  const good = popularCategories.items.find((el: ProductsPageType) => el.category_type === type && (el.id).toString() === id)
+
+  const navigate = useNavigate();
   function handleClick() {
     navigate("-1");
   }
@@ -37,4 +48,8 @@ export const ProductPage: React.FC = () => {
   );
 };
 
+
+function dispatch(fetchGoods: any) {
+  throw new Error("Function not implemented.");
+}
 

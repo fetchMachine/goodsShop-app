@@ -7,6 +7,9 @@ export interface MenuCategories {
 }
 
 export interface State {
+    items: any;
+    find: any;
+    map: any;
     loadStatus: LOAD_STATUSES,
     data: MenuCategories[]
 }

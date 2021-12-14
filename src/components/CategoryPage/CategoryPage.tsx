@@ -6,9 +6,9 @@ import { StoreSelectors  } from "store";
 import { Link, useNavigate } from "react-router-dom";
 
 export const CategoryPage: React.FC = () => {
-  const categories = useSelector(StoreSelectors.getCategories);
+  const categories = useSelector(StoreSelectors.getPopularCategories);
   const { type } = useParams();
-  const thisType = categories.find((el: { category: { type: string | undefined; }; }) => el.category.type === type ) ;
+  const thisType = categories.data.find((el) => el.type === type ) ;
 
   let navigate = useNavigate();
   function handleClick() {
@@ -27,7 +27,7 @@ export const CategoryPage: React.FC = () => {
   }
   return (
     <div>
-      {thisType.items.map((item: { category_type: string; id: number; label: string; price: number; img: string; discription: string; }) => (
+      {/* {thisType.data.map((item) => (
         <Link to={`${item.category_type}/${item.id}`}>
         <GoodCard
           id={item.id}
@@ -39,7 +39,7 @@ export const CategoryPage: React.FC = () => {
         />
         </Link>
 
-      ))}
+      ))} */}
     </div>
   );
 };

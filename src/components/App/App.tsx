@@ -7,6 +7,7 @@ import { CategoryPage } from "../CategoryPage";
 import { ProductPage } from "../ProductPage";
 import { Header } from "components/Header";
 import { Footer } from "components/Footer";
+import { GoodsPage } from "components/GoodsPage";
 
 export const App = () => {
   return (
@@ -21,7 +22,10 @@ export const App = () => {
           }
         />
         <Route path="/:type" element={<CategoryPage />} />
+        
       </Routes>
+      <GoodsPage/>
+     
       <Footer />
     </Provider>
   );

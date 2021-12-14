@@ -1,7 +1,7 @@
 import { GOODS_ACTIONS } from './constants'
 import { Goods } from './types'
 import { Api } from '../../api'
-
+import { Dispatch } from 'react'
 
 export const getGoods = () => ({ type: GOODS_ACTIONS.GET_GOODS })
 
@@ -12,9 +12,7 @@ export const getGoodsSuccess = (goods: Goods[]) => ({
 
 export const getGoodsFailure = () => ({ type: GOODS_ACTIONS.GET_GOODS_FAILURE })
 
-
-
-export const fetchGoods = () => async function (Dispatch: (arg0: { type: GOODS_ACTIONS; payload?: Goods[] }) => void)  {
-    Dispatch(getGoods())
-    new Api().getDataGoods().then((data) => Dispatch(getGoodsSuccess(data.items))).catch(() => Dispatch(getGoodsFailure()))
+export const fetchGoods = () => async function (dispatch:Dispatch <any>)  {
+    dispatch(getGoods())
+    new Api().getDataGoods().then((data) => dispatch(getGoodsSuccess(data.items))).catch(() => dispatch(getGoodsFailure()))
 }

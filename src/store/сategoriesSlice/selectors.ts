@@ -1,3 +1,3 @@
 import { RootState } from "../store"
 
-export const getCategories = (state: RootState) => state.menuCategories 
+export const getCategories = (state: RootState) => state.сategories

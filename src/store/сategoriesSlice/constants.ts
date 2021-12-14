@@ -4,9 +4,9 @@ export enum LOAD_STATUSES {
     LOADED = 'loaded',
     FAILURE = 'failure'
 }
-export enum MENU_CATEGORIES_ACTIONS {
-    GET_MENU_CATEGORIES = 'getMenuCategories',
-    GET_MENU_CATEGORIES_SUCCESS = 'getMenuCategoriesSuccess',
-    GET_MENU_CATEGORIES_FAILURE = 'getMenuCategoriesFeilure'
+export enum CATEGORIES_ACTIONS {
+    GET_CATEGORIES = 'getCategories',
+    GET_CATEGORIES_SUCCESS = 'getCategoriesSuccess',
+    GET_CATEGORIES_FAILURE = 'getCategoriesFeilure'
 };
 

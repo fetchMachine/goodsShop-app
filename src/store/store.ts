@@ -1,10 +1,10 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
-import { menuCategoriesReducer } from './сategoriesSlice'
+import { categoriesReducer } from './сategoriesSlice'
 import thunk from 'redux-thunk'
 import { goodsReducer } from './goodsSlice'
 
 const rootReducer = combineReducers({
-    menuCategories: menuCategoriesReducer,
+    сategories: categoriesReducer ,
     goods: goodsReducer,
 })
 export type RootState = ReturnType<typeof store.getState>

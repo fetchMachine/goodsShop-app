@@ -2,12 +2,10 @@ import { GOODS_ACTIONS, LOAD_STATUSES } from './constants'
 import { Action } from "redux";
 import { State } from './types'
 
-
 const INITIAL_STATE: State = {
     loadStatus: LOAD_STATUSES.UNKNOWN,
     data: []
 }
-
 export function goodsReducer(state = INITIAL_STATE, action: Action<GOODS_ACTIONS>) {
     switch(action.type) {
         case GOODS_ACTIONS.GET_GOODS:
